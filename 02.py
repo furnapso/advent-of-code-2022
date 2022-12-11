@@ -46,11 +46,7 @@ def calculate_score(player1: str, player2: str) -> int:
 
     score = selection_score_map[player2_decoded]
 
-    if player2_decoded == 'ROCK' and player1_decoded == 'SCISSORS':
-        score += 6
-    elif player2_decoded == 'PAPER' and player1_decoded == 'ROCK':
-        score += 6
-    elif player2_decoded == 'SCISSORS' and player1_decoded == 'PAPER':
+    if (player2_decoded == 'ROCK' and player1_decoded == 'SCISSORS') or (player2_decoded == 'PAPER' and player1_decoded == 'ROCK') or (player2_decoded == 'SCISSORS' and player1_decoded == 'PAPER'):
         score += 6
     elif player2_decoded == player1_decoded:
         score += 3
