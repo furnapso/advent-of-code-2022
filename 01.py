@@ -6,7 +6,7 @@ def main():
     elf_totals = []
 
     for elf in elves:
-        elf_totals.append(get_reindeer_total(elf))
+        elf_totals.append(get_elf_total(elf))
 
     print(f"Part one: {max(elf_totals)}")
 
@@ -14,7 +14,7 @@ def main():
     print(f"Part two: {sum(sorted_elf_totals[:3])}")
 
 
-def get_reindeer_total(elf: list) -> int:
+def get_elf_total(elf: list) -> int:
     vals = [int(i) for i in elf.split("\n") if i != '']
     return sum(vals)
 
