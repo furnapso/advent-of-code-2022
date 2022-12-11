@@ -1,8 +1,8 @@
 def main():
     with open("02_input.txt") as f:
-        input = f.read()
+        input = f.read().strip()
 
-    input_data = list(filter(lambda x: x != '', input.split("\n")))
+    input_data = input.split("\n")
 
     score = 0
 

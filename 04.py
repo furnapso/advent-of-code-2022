@@ -19,8 +19,8 @@ def main():
 
 
 def either_fully_contained(r1: str, r2: str) -> bool:
-    r1_lower, r1_upper = list(map(lambda x: int(x), r1.split("-")))
-    r2_lower, r2_upper = list(map(lambda x: int(x), r2.split("-")))
+    r1_lower, r1_upper = [int(i) for i in r1.split("-")]
+    r2_lower, r2_upper = [int(i) for i in r2.split("-")]
 
     if r1_lower <= r2_lower and r1_upper >= r2_upper:
         return True
@@ -31,8 +31,8 @@ def either_fully_contained(r1: str, r2: str) -> bool:
 
 
 def overlaps(r1: str, r2: str) -> bool:
-    r1_lower, r1_upper = list(map(lambda x: int(x), r1.split("-")))
-    r2_lower, r2_upper = list(map(lambda x: int(x), r2.split("-")))
+    r1_lower, r1_upper = [int(i) for i in r1.split("-")]
+    r2_lower, r2_upper = [int(i) for i in r2.split("-")]
 
     return r1_lower <= r2_upper and r1_upper >= r2_lower
 

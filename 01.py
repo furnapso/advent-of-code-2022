@@ -15,8 +15,7 @@ def main():
 
 
 def get_reindeer_total(elf: list) -> int:
-    vals = filter(lambda x: x != '', elf.split("\n"))
-    vals = map(lambda x: int(x), vals)
+    vals = [int(i) for i in elf.split("\n") if i != '']
     return sum(vals)
 
 
